@@ -1,0 +1,37 @@
+<div class="container">
+  <h1>ESTE ES MI PRIMER PROYECTO</h1>
+  <h2>{{welcome}}</h2>
+  <ul>
+    <li *ngFor="let task of tasks()">
+      {{task}}
+    </li>
+  </ul>
+  <hr>
+  <h2>{{ 'hola '.repeat(5) }}</h2>
+  <p>La suma de 3+3 es:{{3+3}}</p>
+  <p>Hola soy {{name()}} y tengo {{age}} años</p>
+  <hr>
+  <img [src]="person().avatar" alt="">
+  <input type="number" [value]="person().age">
+  <button [disabled]="disabled">click me</button>
+  <p>person:{{person().name}}</p>
+  <button (click)="clickHandler()">Click me</button>
+  <p>(change)</p>
+  <input type="number" [value]="person().age" (change)="changeHandler($event)">
+  <ul>
+    <li *ngFor="let task of tasks(); index as i">
+      {{i}}
+      {{task}}
+    </li>
+  </ul>
+
+  <div *ngIf="1==1">
+    My contend
+  </div>
+
+  <div *ngIf="name() === 'Joan Ventura'">
+    My contend22
+  </div>
+  <p>(keydown)</p>
+  <input type="text" [value]="name()" (keydown)="changeHandler($event)">
+</div>
